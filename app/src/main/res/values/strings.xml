@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GenericApp</string>
+    <string name="la_mia_carta">La mia carta</string>
+    <string name="il_mio_profilo">Il mio profilo</string>
+    <string name="dove_siamo">Dove siamo</string>
+    <string name="notizie">Notizie</string>
 </resources>

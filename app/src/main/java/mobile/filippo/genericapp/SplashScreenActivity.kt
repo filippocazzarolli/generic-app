@@ -1,5 +1,6 @@
 package mobile.filippo.genericapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,7 +19,7 @@ class SplashScreenActivity : AppCompatActivity(), Animation.AnimationListener {
     }
 
     private fun startAnimation() {
-        val animation = AnimationUtils.loadAnimation(this,  R.anim.splash_screen_logo)
+        val animation = AnimationUtils.loadAnimation(this, R.anim.splash_screen_logo)
         animation.setAnimationListener(this)
         imageView.startAnimation(animation)
     }
@@ -28,12 +29,11 @@ class SplashScreenActivity : AppCompatActivity(), Animation.AnimationListener {
     }
 
     override fun onAnimationEnd(animation: Animation?) {
-        Log.i("XXX", "FINISH")
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onAnimationStart(animation: Animation?) {
-        Log.i("XXX", "START")
-
     }
 
 }
