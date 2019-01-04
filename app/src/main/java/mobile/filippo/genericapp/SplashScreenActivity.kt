@@ -8,6 +8,9 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 
 import kotlinx.android.synthetic.main.activity_splash_screen.*
+import android.app.ActivityOptions
+
+
 
 class SplashScreenActivity : AppCompatActivity(), Animation.AnimationListener {
 
@@ -29,8 +32,9 @@ class SplashScreenActivity : AppCompatActivity(), Animation.AnimationListener {
     }
 
     override fun onAnimationEnd(animation: Animation?) {
+        val options = ActivityOptions.makeSceneTransitionAnimation(this)
         val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        startActivity(intent, options.toBundle())
     }
 
     override fun onAnimationStart(animation: Animation?) {

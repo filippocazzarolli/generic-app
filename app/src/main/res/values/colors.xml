@@ -3,8 +3,9 @@
     <color name="colorPrimary">#F44336</color>
     <color name="colorPrimaryDark">#D32F2F</color>
     <color name="colorAccent">#795548</color>
-
     <color name="colorPrimaryLight">#FFCDD2</color>
+    <color name="backgroundApp">#FFFFFF</color>
+
     <color name="colorText">#FFFFFF</color>
     <color name="colorPrimaryText">#FFCDD2</color>
     <color name="colorSecondaryText">#757575</color>
