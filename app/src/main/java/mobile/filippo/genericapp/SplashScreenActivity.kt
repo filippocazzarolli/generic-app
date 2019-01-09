@@ -34,7 +34,8 @@ class SplashScreenActivity : AppCompatActivity(), Animation.AnimationListener {
     override fun onAnimationEnd(animation: Animation?) {
         val options = ActivityOptions.makeSceneTransitionAnimation(this)
         val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent, options.toBundle())
+//        startActivity(intent, options.toBundle())
+        startActivity(intent)
     }
 
     override fun onAnimationStart(animation: Animation?) {
