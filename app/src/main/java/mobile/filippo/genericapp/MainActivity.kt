@@ -1,10 +1,11 @@
 package mobile.filippo.genericapp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.transition.Transition
 import android.transition.TransitionInflater
 import android.view.Window
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,9 +16,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        initAnimation()
+//        initAnimation()
+        initButton()
 
-        window.allowEnterTransitionOverlap  = false
+        window.allowEnterTransitionOverlap = false
+    }
+
+    private fun initButton() {
+
+        btnProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
