@@ -1,8 +1,8 @@
 package mobile.filippo.genericapp
 
 import android.os.Bundle
-import android.transition.TransitionInflater
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -10,12 +10,20 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-//        initAnimation()
+        initToolbar()
+
     }
 
-    private fun initAnimation() {
-        val enterTransition = TransitionInflater.from(this).inflateTransition(R.transition.explode)
-        window.enterTransition = enterTransition
+    private fun initToolbar() {
+        toolbar.setTitle(R.string.il_mio_profilo)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
     }
+
 
 }
