@@ -3,6 +3,7 @@
           package="mobile.filippo.genericapp">
 
     <application
+        android:name=".MyApp"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher_background"
             android:label="@string/app_name"
